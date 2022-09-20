@@ -7,6 +7,8 @@
 # Assignment:   Lab 3.19
 # Date:         13 9 2022
 
+# This is just a test to see if github automatically updates my files
+
 from math import e
 # Prompting the user to input the number of decimal places they want for euler's number
 precision = input("Please enter the number of digits of precision for e: ")
