@@ -8,6 +8,8 @@
 # Date:         09/20/22
 days = int(input("Please enter a positive value for day: "))
 number_of_gadgets = 0
+if days < 0:
+    print("You entered an invalid number!")
 if 0 < days < 11:
     number_of_gadgets = days*5
 if 10 < days < 60:
@@ -26,6 +28,5 @@ if days > 100:
     number_of_gadgets = 2550
     area_trap = int((1/2)*(49+10)*40)
     number_of_gadgets += area_trap
-if days < 0:
-    print("You entered an invalid number!")
-print(f"The total number of gadgets produced on day {days} is {number_of_gadgets}")
+if days > 0:
+    print(f"The total number of gadgets produced on day {days} is {number_of_gadgets}")
