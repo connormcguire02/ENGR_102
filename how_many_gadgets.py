@@ -1,9 +1,17 @@
+# By submitting this assignment, I agree to the following:
+#   "Aggies do not lie, cheat, or steal, or tolerate those who do."
+#   "I have not given or received any unauthorized aid on this assignment."
+#
+# Name:        Connor McGuire
+# Section:      563
+# Assignment:   Lab 4.18: how_may_gadgets
+# Date:         09/20/22
 days = int(input("Please enter a positive value for day: "))
 number_of_gadgets = 0
-if days <= 10:
-    number_of_gadgets *= 5
+if 0 < days < 11:
+    number_of_gadgets = days*5
 if 10 < days < 60:
-    number_of_gadgets = 50 + number_of_gadgets*50
+    number_of_gadgets = 50 + (days - 10)*50
 # now the next part is a tad bit complicated for some reason
 if 60 < days < 100:
     number_of_gadgets = 2550
