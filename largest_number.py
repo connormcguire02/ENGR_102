@@ -13,10 +13,12 @@ number_two =   float(input("Enter number 2: "))
 number_three = float(input("Enter number 3: "))
 
 # using if statements to determine the largest number
-if number_one > number_two and number_one > number_three:
+if number_one >= number_two and number_one >= number_three:
     print(f"The largest number is {number_one}")
-if number_two > number_one and number_two > number_three:
+    quit()
+if number_two >= number_one and number_two >= number_three:
     print(f"The largest number is {number_two}")
-if number_three > number_one and number_three > number_two:
+    quit()
+if number_three >= number_one and number_three >= number_two:
     print(f"The largest number is {number_three}")
-
+    quit()
