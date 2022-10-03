@@ -14,11 +14,15 @@ num2 = int(input("Enter another integer: "))
 # creating a loop that will go through all 100 numbers and check for divisibility
 i = 1
 while i <= 100:
-    print(i)
     if i%num1 == 0 and i%num2 == 0:
+        # print(i)
         print("Howdy Whoop")
     elif i%num1 == 0:
+        # print(i)
         print("Howdy")
     elif i%num2 == 0:
+        # print(i)
         print("Whoop")
+    else:
+        print(i)
     i += 1
