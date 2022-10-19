@@ -20,14 +20,24 @@ def bubbleSort(a, bool):
 #prompting the user to enter a 4 digit number
 string_number = input("Enter a four-digit integer: ")
 number = int(string_number)
-n = 0
-while n < 3:
-    # the loop needs a reinitialization of the string number
-    string_number = str(number)
+string_output = string_number + " > "
+string_outputPt2 = string_number + ""
 
-    # initializing the reversed numbers
-    string_sorted = ""
-    number_backwards = 0
+# adding leading zeros if necessary
+while len(string_number) < 4:
+    string_number = "0"+string_number
+# print(string_number)
+
+# looping the subtraction process until number equals the constant
+n = 0
+while number != 6174:
+    # the loop needs a reinitialization of the string number after the first iteration
+    if n > 0:
+        string_number = str(number)
+        string_output += string_number + " > "
+        # adding leading zeros if necessary
+        while len(string_number) < 4:
+            string_number = "0"+string_number
 
     # using my sort method to sort the string
     string_descending = bubbleSort(string_number, True)
@@ -39,5 +49,15 @@ while n < 3:
 
     # finding which number is bigger and subtracting the bigger from the smaller
     number = abs(number_ascending-number_descending)
+    if number == 0:
+        break
     # print(number)
     n += 1
+
+# printing the output
+if number == 0:
+    print(string_output+"0")
+    print(string_outputPt2+" reaches "+str(number)+" via Kaprekar's routine in 1 iterations")
+else:
+    print(string_output + "6174")
+    print(string_outputPt2+" reaches "+str(number)+" via Kaprekar's routine in " +str(n)+" iterations")
