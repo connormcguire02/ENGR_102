@@ -17,6 +17,7 @@ for i in dial_input:
 
 for i in dial_input_list:
     for j in dial:
-        print(dial[j])
+        if dial[j].__contains__(str(i)):
+            i = j
 
-# print(dial_input_list)
+print(dial_input_list)
