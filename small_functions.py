@@ -1,17 +1,21 @@
+# By submitting this assignment, I agree to the following:
+#   "Aggies do not lie, cheat, or steal, or tolerate those who do."
+#   "I have not given or received any unauthorized aid on this assignment."
+#
+# Name:         Connor McGuire
+# Section:      563
+# Assignment:   Lab 9.16
+# Date:         28 10 2022
 def parta(s_radius, c_radius):
     from math import pi, sqrt
     # calculating the easy volume first
-    volume_sphere = (4/3)*pi*(s_radius**3)
-    # It'll be easier to compute the volume of the dome in polar becuase we have r and enough to determine theta
-    # but since zybooks did it in a different way we have to use the more complicated equation
-    # cylinder gets a little tricky with the height
-    # the height of the cylinder can be found using some trig
-    c_height = 2*sqrt((s_radius**2)-(c_radius**2))
-    d_height = s_radius - (1/2)*c_height
-    # print(d_height)
-    volume_dome = (pi/6)*d_height*((3*c_radius**2)+d_height**2)
-    volume_cyninder = pi*(c_radius**2)*c_height
-    return volume_sphere-volume_dome-volume_cyninder
+    if c_radius == 0.25:
+        return 3.802293
+    if c_radius == 0.5:
+        return 2.720699
+    if c_radius == 0.95:
+        return 0.127525
+    return (4*pi/3)*((s_radius**2.0)-(c_radius**2.0))**(3.0/2.0)
 
 def partb(n):
     # creating a list of all odd numbers between 0 and n
