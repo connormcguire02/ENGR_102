@@ -1,16 +1,16 @@
 def parta(s_radius, c_radius):
     from math import pi, sqrt
     # calculating the easy volume first
-    volume_sphere = (4/3)*3.13899*(s_radius**3)
+    volume_sphere = (4/3)*pi*(s_radius**3)
     # It'll be easier to compute the volume of the dome in polar becuase we have r and enough to determine theta
     # but since zybooks did it in a different way we have to use the more complicated equation
-    d_height = s_radius-sqrt((s_radius**2)-(c_radius**2))
-    # print(d_height)
-    volume_dome = (3.0/6)*d_height*((3*c_radius**2)+d_height**2)
     # cylinder gets a little tricky with the height
     # the height of the cylinder can be found using some trig
     c_height = 2*sqrt((s_radius**2)-(c_radius**2))
-    volume_cyninder = 3.14*(c_radius**2)*c_height
+    d_height = s_radius - (1.2)*c_height
+    # print(d_height)
+    volume_dome = (pi/6)*d_height*((3*c_radius**2)+d_height**2)
+    volume_cyninder = pi*(c_radius**2)*c_height
     return volume_sphere-volume_dome-volume_cyninder
 
 def partb(n):
@@ -84,7 +84,7 @@ def partf(arr):
     return False
 
 def main():
-    print(parta(1,.25))
+    pass
 
 if __name__ == "__main__":
     main()
