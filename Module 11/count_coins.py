@@ -7,7 +7,6 @@
 # Assignment:   Lab 9.16
 # Date:         28 10 2022
 
-<<<<<<< HEAD
 # creating an object that will be used to write to the file
 filewriter = open("coins.txt", "w")
 
@@ -36,44 +35,14 @@ with open("game.txt", "r") as filehandler:
                 filewriter.write(str((-1)*int(instructions[i][1][1:]))+"\n")
             i += 1
             continue
-=======
-filewriter = open("coins.txt", "w")
-
-with open("game.txt", "r") as filehandler:
-    entire_text = filehandler.read()
-    instructions = entire_text.split("\n")
-    i = 0
-    coin_accum = 0
-    while i < len(instructions):
-        instructions[i] = instructions[i].split()
-        print(instructions[i])
->>>>>>> 2c92d46862032db1ed04a868e3ae36c3ee43287b
         if instructions[i][0] == 'jump':
             if '+' in instructions[i][1]:
                 i += int(instructions[i][1][1:])
                 filewriter.write(instructions[i][1][0]+"\n")
             else:
-<<<<<<< HEAD
                 i = i - int(instructions[i][1][1:])
             continue
     # print the total number of coins
     print(f"Total coins collected: {coin_accum}")
     
 
-=======
-                i -= int(instructions[i][1][1:])
-                filewriter.writelines(instructions[i][1][1:]+"\n")
-            continue
-        if instructions[i][0] == 'none':
-            i += 1
-            continue
-        if instructions[i][0] == 'coin':
-            if '+' in instructions[i][1]:
-                coin_accum += int(instructions[i][1][1:])
-                i += 1
-            else:
-                coin_accum -= int(instructions[i][1][1:])
-                i += 1
-            continue
-    print(f"Total coins collected: {coin_accum}")
->>>>>>> 2c92d46862032db1ed04a868e3ae36c3ee43287b
