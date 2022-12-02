@@ -8,5 +8,14 @@ with open("dayoneinput.txt", "r") as fileID:
         for j in range(len(entire_text[i])):
             accum += int(entire_text[i][j])
         total += [accum]
-    print(max(total))
+        accum = 0
+    
+    accum = 0
+    for _ in range(3):
+        accum += max(total)
+        for i in range(len(total)):
+            if total[i] == max(total):
+                total.pop(i)
+                break
+    print(accum)
     
