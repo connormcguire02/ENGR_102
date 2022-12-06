@@ -1,42 +1,51 @@
 import turtle
+
 class Path(turtle.Turtle):
     def __init__(self):
-        self.t = self.turtle.Turtle()
+        pass
     
-    def right(self, deg, distance):
-        deg += 90
-        Path.t.right(deg)
-        Path.t.forward(distance)
-        input()
-        return deg
+    def right(self, deg):
+        super().right(deg)
 
-    def slight_right(self, deg, distance):
-        deg += 45
-        Path.t.right(deg)
-        Path.t.forward(distance)
-        input()
-        return deg
+    def slight_right(self):
+        super().right(45)
 
-    def slight_left(self, deg, distance):
-        deg += 45
-        Path.t.left(deg)
-        Path.t.forward(distance)
-        input()
-        return deg
+    def slight_left(self):
+        super().left(45)
 
-    def left(self, deg, distance):
-        deg += 90
-        Path.t.left(deg)
-        Path.t.forward(distance)
-        input()
-        return deg
+    def left(self, deg):
+        super().left(deg)
 
     def forward(self, distance):
-        Path.t.forward(distance)
-        input()
+        super.forward(distance)
     
     def direction(self):
-        pass
+        super.heading()
+    
+    def east():
+        super.left(0-super.heading())
+    
+    def northEast():
+        super.left(45-super.heading())
+    
+    def north():
+        super.left(90-super.heading())
+    
+    def northWest():
+        super.left(135-super.heading())
+    
+    def west():
+        super.left(180-super.heading())
+    
+    def southWest():
+        super.left(225-super.heading())
+    
+    def south():
+        super.left(270-super.heading())
+    
+    def southEast():
+        super.left(315-super.heading())
+
 if __name__=='__main__':
     from math import pi
     pth = Path(pi, 5)
